@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <section class="sub-header">
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('ImportantNotifications') }}">Important Notifications</a></li>
+          <li><a href="{{ url_for('SignUp') }}">Sign Up</a></li>
+          <li><a href="{{ url_for('Contact') }}">Contact Us</a></li>
+          <li><a href="{{ url_for('About') }}">About Us</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-list" onclick="showMenu()"></i>
+    </nav>
+
+    <h1>About Us</h1>
+  </section>
+
+  <!-----About Us Content----->
+
+  <section class="about-us">
+    <div class="rows">
+      <div class="about-col">
+        <h1></h1>
+        <p>
+          Maharashtra State Electricity Board (or MSEB) (Marathi:महाराष्ट्र
+          राज्य विद्युत मंडळ).<br />
+          The MSEB was formed on 20 June 1960 under Section 5 of the
+          Electricity (Supply) Act, 1948. <br />
+          In 1998 it was the second largest electricity generating utility in
+          India after National Thermal Power Corporation.
+        </p>
+        <a href="https://ahmednagar.nic.in/en/public-utility/sangamner-division/" class="hero-btn red-btn">Explore
+          Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!---Footer----->
+
+  <section class="footer">
+
+    <div class="icons">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-linkedin"></i>
+    </div>
+  </section>
+
+  <!---JavaScript for Toggle Menu----->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-280px";
+    }
+  </script>
+</body>
+
+</html>

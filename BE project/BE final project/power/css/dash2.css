@@ -1,0 +1,120 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container{
+  display: flex;
+  color: rgb(9, 157, 137);
+  font-size: 12px;
+}
+nav{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  background:url(../images/front.jpg);
+  background-size: 480%;
+  width: 280px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgb(9, 157, 137);
+}
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+}
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  color:rgb(9, 157, 137);
+  font-size: 14px;
+  display: table;
+  width: 280px;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  background: rgb(9, 157, 137);
+  color: rgb(4, 53, 48);
+  background-size: 150%;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+/* Main Section */
+.main{
+
+  width: 82%;
+  background: url(../images/wallpaper3.jpg);
+  background-size: 120%;
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+
+.html{
+  color: rgb(25, 94, 54);
+}
+.css{
+  color: rgb(104, 179, 35);
+}
+.js{
+  color: rgb(28, 98, 179);
+}
+.h1{
+  font-size: 30px;
+}
+.main-top h1{
+font-size: 150px;
+}
+.main{
+
+width: 82%;
+background: url(../images/wallpaper3.jpg);
+background-size: 120%;
+}
+  .main-top h1{
+    font-size: 150px;
+  }
+  
+

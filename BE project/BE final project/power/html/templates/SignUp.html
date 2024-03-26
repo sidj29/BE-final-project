@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign UP</title>
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+
+  <section class="sub-header">
+
+    <nav>
+
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('ImportantNotifications') }}">Important Notifications</a></li>
+          <li><a href="{{ url_for('SignUp') }}">Sign Up</a></li>
+          <li><a href="{{ url_for('Contact') }}">Contact Us</a></li>
+          <li><a href="{{ url_for('About') }}">About Us</a></li>
+      </div>
+      <i class="fa fa-list" onclick="showMenu()"></i>
+    </nav>
+
+    <h1>Sign Up</h1>
+
+  </section>
+
+
+
+  <section class="contact-us">
+
+    <div class="row">
+      <div class="contact-col">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title">Customer</h1>
+
+            <a href=" {{ url_for('customerlogin') }}" class="hero-btn red-btn">Login</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-col">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title">Employee</h1>
+
+            <a href=" {{ url_for('EmployeeLogin') }}" class="hero-btn red-btn">Login</a>
+          </div>
+        </div>
+      </div>
+
+  </section>
+</body>
+
+</html>
+
+<style>
+  /*------Footer--------*/
+
+  .sub-header {
+    height: 60vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/login.jpg);
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .sub-header h1 {
+    margin-top: 100px;
+    size: 20%;
+  }
+
+
+
+
+  nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav img {
+
+    width: 150px;
+
+  }
+
+  .nav-links {
+    flex: 1;
+    text-align: right;
+
+  }
+
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  .nav-links ul li ::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+  }
+
+
+  .nav-links ul li :hover::after {
+    width: 100%;
+  }
+
+
+  nav .fa {
+    display: none;
+  }
+
+  @media (max-width: 700px) {
+
+    .text-box h1 {
+      font-size: 20px;
+    }
+
+    .nav-links ul li {
+      display: block;
+
+    }
+
+    .nav-links {
+      position: absolute;
+      background: #f44336;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -280px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+    }
+
+    nav .fa {
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .nav-links {
+      padding: 20px;
+    }
+
+  }
+
+
+  .footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+
+  .footer p {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .icons .fa {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .fa-heart-o {
+    color: #f44336;
+  }
+
+
+  .about-us {
+    text-align: center;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+  }
+
+  .red-btn {
+    border: 1px solid #f44336;
+    color: #f44336;
+  }
+
+  .red-btn:hover {
+    color: #fff;
+  }
+
+
+
+  .location {
+    width: 85%;
+    margin: auto;
+    padding: 80px 0;
+  }
+
+  .location iframe {
+    width: 100%;
+
+  }
+
+  .contact-us {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .contact-col {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+    width: 50%;
+    display: flex;
+    float: left;
+    padding-left: 18%;
+  }
+
+
+
+  .row {
+    display: flex;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
